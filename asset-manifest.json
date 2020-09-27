@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mattems12/stacker-puzzle/static/css/main.57c584d2.chunk.css",
+    "main.js": "/mattems12/stacker-puzzle/static/js/main.01513848.chunk.js",
+    "main.js.map": "/mattems12/stacker-puzzle/static/js/main.01513848.chunk.js.map",
+    "runtime-main.js": "/mattems12/stacker-puzzle/static/js/runtime-main.106afc7c.js",
+    "runtime-main.js.map": "/mattems12/stacker-puzzle/static/js/runtime-main.106afc7c.js.map",
+    "static/js/2.abbf4e99.chunk.js": "/mattems12/stacker-puzzle/static/js/2.abbf4e99.chunk.js",
+    "static/js/2.abbf4e99.chunk.js.map": "/mattems12/stacker-puzzle/static/js/2.abbf4e99.chunk.js.map",
+    "index.html": "/mattems12/stacker-puzzle/index.html",
+    "precache-manifest.966e43ff0a5d70a89995bc45bf8f6885.js": "/mattems12/stacker-puzzle/precache-manifest.966e43ff0a5d70a89995bc45bf8f6885.js",
+    "service-worker.js": "/mattems12/stacker-puzzle/service-worker.js",
+    "static/css/main.57c584d2.chunk.css.map": "/mattems12/stacker-puzzle/static/css/main.57c584d2.chunk.css.map",
+    "static/js/2.abbf4e99.chunk.js.LICENSE.txt": "/mattems12/stacker-puzzle/static/js/2.abbf4e99.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.106afc7c.js",
+    "static/js/2.abbf4e99.chunk.js",
+    "static/css/main.57c584d2.chunk.css",
+    "static/js/main.01513848.chunk.js"
+  ]
+}
