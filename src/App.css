@@ -1,0 +1,125 @@
+.Material {
+    color: #eee;
+    background-color: #199;
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    line-height: 3em;
+    font-size: large;
+}
+
+.blue {
+    background-color: #00799e;
+    border-color: #00799e;
+}
+
+.yellow {
+    background-color: #a19900;
+    border-color: #a19900;
+}
+
+.green {
+    background-color: #008004;
+    border-color: #008004;
+}
+
+.red {
+    background-color: #a10000;
+    border-color: #a10000;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.triangle {
+    height: 0px;
+    width: 0px;
+    background-color: transparent;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 50px;
+}
+
+.active {
+    border-top: solid;
+    border-top-color: #fff;
+    border-top-height: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.Hand {
+    width: 20vw;
+}
+
+.Deck {
+    width: 20vw;
+    display: flex;
+    flex-direction:column;
+}
+
+.Grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Stack {
+    width: 50vw;
+}
+
+.Actions {
+    padding-top: 50px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  color: #eee;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
