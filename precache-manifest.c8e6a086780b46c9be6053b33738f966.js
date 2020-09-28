@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6dbd97d8d387c9432d98b827a01744c5",
+    "revision": "5660dd9952bfaf2490b2c1a66358e863",
     "url": "/stacker-puzzle/index.html"
   },
   {
-    "revision": "6b6004aca1651cc26965",
-    "url": "/stacker-puzzle/static/css/main.9806a293.chunk.css"
+    "revision": "6f5412e7664a79f37676",
+    "url": "/stacker-puzzle/static/css/main.4c0e68e9.chunk.css"
   },
   {
     "revision": "e6456dfd5a6614f0ec86",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stacker-puzzle/static/js/2.abbf4e99.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6b6004aca1651cc26965",
+    "revision": "6f5412e7664a79f37676",
     "url": "/stacker-puzzle/static/js/main.43c3e166.chunk.js"
   },
   {
