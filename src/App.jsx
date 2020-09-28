@@ -23,13 +23,13 @@ function App() {
   const [curDeck, setCurDeck] = useState(materialDeck);
   const [totalScore, setTotalScore] = useState(0);
 
-  let effect_descriptions = {"blue": "If a red mat is below me, double it's score.",
-                             "red": "When forced off the stack, add half this score to the 2nd mat on the stack.",
-                             "green": "Increase the score of each adjacent mat by 20%",
-                             "yellow": "When placed, increase the score of the bottom mat by 50%",
-                             "circle": "when forced off the stack, add this score to the top most circle mat",
-                             "triangle": "If this is on the top of the stack AND adjacent to a square, increase both mat scores by 25%",
-                             "square": "If placed above another square, double this score."}
+  const effect_descriptions = {"blue": "If a red material is below me, double it's score.",
+                             "red": "When forced off the stack, add half this score to the 2nd material on the stack.",
+                             "green": "Increase the score of each adjacent material by 20%",
+                             "yellow": "When placed, increase the score of the bottom material by 50%",
+                             "circle": "When forced off the stack, add this score to the top most circle material",
+                             "triangle": "If this is on the top of the stack AND adjacent to a square, increase both material scores by 25%",
+                             "square": "If placed above another square, double this material's score."}
 
   function executeMat(material, poppedFromBottom) {
     //execute the specific material effects, based on the current state of the matStack
@@ -46,7 +46,7 @@ function App() {
         }else if(material.color === YELLOW) {
             if(matStack.length == 4) {
                 console.log("yellow effect activated!");
-                matStack[3].score = Math.floor(matStack[3] * 1.5);
+                matStack[3].score = Math.floor(matStack[3].score * 1.5);
             }
         }
 
@@ -175,31 +175,63 @@ function App() {
     <div className="App">
         <div className="Deck">
             Deck
-            <div className="Grid">
-                {curDeck.map((mat, i) =>
-                    <Material key={i} color={mat.color} shape={mat.shape}></Material>
-                )}
+            <p>
+            Some starting amount of materials. This would be determined by the crafting recipe.
+            (Maybe players can adjust what goes into the "deck"?)
+            </p>
+            <div className="GridWrap">
+                <div className="Grid">
+                    {curDeck.map((mat, i) =>
+                        <Material key={i} color={mat.color} shape={mat.shape}></Material>
+                    )}
+                </div>
+            </div>
+            <button className="Btn" onClick={drawFromDeck}>Draw Material</button>
+            <br />
+            <br />
+            <div className="Effects">
+                <h3>Effects:</h3>
+                <p><b>Blue</b>: {effect_descriptions.blue}</p>
+                <p><b>Red</b>: {effect_descriptions.red}</p>
+                <p><b>Green</b>: {effect_descriptions.green}</p>
+                <p><b>Yellow</b>: {effect_descriptions.yellow}</p>
+                <p><b>Square</b>: {effect_descriptions.square}</p>
+                <p><b>Circle</b>: {effect_descriptions.circle}</p>
+                <p><b>Triangle</b>: {effect_descriptions.triangle}</p>
             </div>
         </div>
         <div className="Hand">
             Hand
+            <p>
+            The "hand" is a random subset of materials from the "deck". (Maybe players can adjust the RNG?)
+            </p>
             <div className="Grid">
                 {playerHand.map((mat, i) =>
                     <Material key={i} id={mat.id} selectMe={selectMat} color={mat.color} shape={mat.shape}></Material>
                 )}
             </div>
+            <button className="Btn" onClick={pushMat}>Stack Selected Material</button>
         </div>
         <div className="Stack">
             Stack
-            {matStack.map((mat, i) =>
-                <Material key={i} color={mat.color} shape={mat.shape}>{mat.score}</Material>
-            )}
+            <p>
+            Materials are placed on the "stack" with various effects triggering at different times. This stack's max
+            size is currently set at 4. When a material is placed and the max size is exceeded, the bottom material
+            is popped off.
+            </p>
+            <div>
+                {matStack.map((mat, i) =>
+                    <Material key={i} color={mat.color} shape={mat.shape}>{mat.score}</Material>
+                )}
+            </div>
+            <button className="Btn" onClick={calculateFinalScore}>Done</button>
         </div>
-        <div className="Actions">
-            <button onClick={pushMat}>Stack Selected Material</button>
-            <button onClick={drawFromDeck}>Draw Material</button>
-            <button onClick={calculateFinalScore}>Done</button>
-            <p>{totalScore}</p>
+        <div className="Score">
+            Score
+            <p>The score is the sum of the current materials on the stack, plus any additional effects that trigger
+            on completion.
+            </p>
+            <p>Final Score: {totalScore}</p>
         </div>
 
     </div>
