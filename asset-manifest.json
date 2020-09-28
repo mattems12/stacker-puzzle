@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/stacker-puzzle/static/css/main.57c584d2.chunk.css",
-    "main.js": "/stacker-puzzle/static/js/main.9e78a5b6.chunk.js",
-    "main.js.map": "/stacker-puzzle/static/js/main.9e78a5b6.chunk.js.map",
+    "main.css": "/stacker-puzzle/static/css/main.9806a293.chunk.css",
+    "main.js": "/stacker-puzzle/static/js/main.43c3e166.chunk.js",
+    "main.js.map": "/stacker-puzzle/static/js/main.43c3e166.chunk.js.map",
     "runtime-main.js": "/stacker-puzzle/static/js/runtime-main.1aacb962.js",
     "runtime-main.js.map": "/stacker-puzzle/static/js/runtime-main.1aacb962.js.map",
     "static/js/2.abbf4e99.chunk.js": "/stacker-puzzle/static/js/2.abbf4e99.chunk.js",
     "static/js/2.abbf4e99.chunk.js.map": "/stacker-puzzle/static/js/2.abbf4e99.chunk.js.map",
     "index.html": "/stacker-puzzle/index.html",
-    "precache-manifest.56797bb02a84a3625fdd6bf35c98e4d4.js": "/stacker-puzzle/precache-manifest.56797bb02a84a3625fdd6bf35c98e4d4.js",
+    "precache-manifest.b8a9a8eb36ef0a8628f32272146452d5.js": "/stacker-puzzle/precache-manifest.b8a9a8eb36ef0a8628f32272146452d5.js",
     "service-worker.js": "/stacker-puzzle/service-worker.js",
-    "static/css/main.57c584d2.chunk.css.map": "/stacker-puzzle/static/css/main.57c584d2.chunk.css.map",
+    "static/css/main.9806a293.chunk.css.map": "/stacker-puzzle/static/css/main.9806a293.chunk.css.map",
     "static/js/2.abbf4e99.chunk.js.LICENSE.txt": "/stacker-puzzle/static/js/2.abbf4e99.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1aacb962.js",
     "static/js/2.abbf4e99.chunk.js",
-    "static/css/main.57c584d2.chunk.css",
-    "static/js/main.9e78a5b6.chunk.js"
+    "static/css/main.9806a293.chunk.css",
+    "static/js/main.43c3e166.chunk.js"
   ]
 }
