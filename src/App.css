@@ -94,6 +94,8 @@ ul {
 
 .App {
   text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
