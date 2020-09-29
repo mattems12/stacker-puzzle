@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/stacker-puzzle/precache-manifest.e1cbe95cb087ea1335c1628b0e75cc1d.js"
+  "/stacker-puzzle/precache-manifest.597766844dc992d110671d86142a84e2.js"
 );
 
 self.addEventListener('message', (event) => {
