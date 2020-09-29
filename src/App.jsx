@@ -18,7 +18,8 @@ const EFFECT_GROUP_2 = [CIRCLE, TRIANGLE, SQUARE];
 function App() {
   const [selectedMat, setSelectedMat] = useState(null);
   const [matStack, setMatStack] = useState([]);
-  const [playerHand, setPlayerHand] = useState([]);
+  const [playerHand, setPlayerHand] = useState([]); //used to display the current mats.
+  const [curHand, setCurHand] = useState([]); // used to track copies of the original cards.
   const materialDeck = generateDeck(20);
   const [curDeck, setCurDeck] = useState(materialDeck);
   const [totalScore, setTotalScore] = useState(0);
@@ -104,6 +105,18 @@ function App() {
     setTotalScore(grandTotal);
   }
 
+  function resetHand() {
+    let newHand = JSON.parse(JSON.stringify(curHand));
+    for(let i=0; i<playerHand.length; i++) {
+        delete playerHand[i];
+    }
+    console.log(playerHand);
+    console.log(newHand);
+    setPlayerHand(newHand);
+    setMatStack([]);
+    setTotalScore(0);
+  }
+
   function generateDeck(amount) {
     let deck = [];
     for(let i=0; i < amount; i++) {
@@ -162,11 +175,15 @@ function App() {
   }
   function drawFromDeck() {
     let newHand = [...playerHand];
+    let newCurHand = [...curHand];
     let deck = [...curDeck];
     if(deck.length > Math.floor(materialDeck.length/2)){
         let randomIndex = getRndInteger(0, deck.length-1);
-        newHand.push(deck.splice(randomIndex, 1)[0]); //take a random index from the deck
+        let randMat = deck.splice(randomIndex, 1)[0]
+        newHand.push(randMat); //take a random index from the deck
+        newCurHand.push(Object.assign({}, randMat)); //take a random index from the deck
         setPlayerHand(newHand);
+        setCurHand(newCurHand);
         setCurDeck(deck);
     }
   }
@@ -232,6 +249,7 @@ function App() {
             on completion.
             </p>
             <p>Final Score: {totalScore}</p>
+            <button onClick={resetHand}>Play Same Hand</button>
         </div>
 
     </div>
