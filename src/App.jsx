@@ -27,7 +27,7 @@ function App() {
   const effect_descriptions = {"blue": "If a red material is below me, double it's score.",
                              "red": "When forced off the stack, add half this score to the 2nd material on the stack.",
                              "green": "Increase the score of each adjacent material by 20%",
-                             "yellow": "When placed, increase the score of the bottom material by 50%",
+                             "yellow": "When placed, increase the score of the bottom (4th slot) material by 50%",
                              "circle": "When forced off the stack, add this score to the top most circle material",
                              "triangle": "If this is on the top of the stack AND adjacent to a square, increase both material scores by 25%",
                              "square": "If placed above another square, double this material's score."}
@@ -47,7 +47,7 @@ function App() {
         }else if(material.color === YELLOW) {
             if(matStack.length == 4) {
                 console.log("yellow effect activated!");
-                matStack[3].score = Math.floor(matStack[3].score * 1.5);
+                matStack[2].score = Math.floor(matStack[2].score * 1.5);
             }
         }
 
